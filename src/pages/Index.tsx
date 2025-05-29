@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
@@ -12,21 +11,21 @@ const Index = () => {
       id: 1,
       name: "Дуб Классик",
       price: "15,500",
-      image: "/placeholder.svg",
+      image: "/src/img/дуб классик.jpg",
       material: "Натуральный дуб"
     },
     {
       id: 2,
       name: "Ясень Элегант",
       price: "18,900",
-      image: "/placeholder.svg", 
+      image: "/src/img/ясень.jpg", 
       material: "Массив ясеня"
     },
     {
       id: 3,
       name: "Орех Премиум",
       price: "22,000",
-      image: "/placeholder.svg",
+      image: "/src/img/орех премиум.jpg",
       material: "Американский орех"
     }
   ];
@@ -75,7 +74,13 @@ const Index = () => {
             {featuredProducts.map((product) => (
               <Link key={product.id} to={`/product/${product.id}`}>
                 <Card className="group cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm">
-                  <div className="aspect-square bg-gradient-to-br from-amber-100 to-orange-200 rounded-t-lg"></div>
+                  <div className="aspect-square overflow-hidden rounded-t-lg">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold text-amber-900 mb-2 group-hover:text-orange-800 transition-colors">
                       {product.name}
