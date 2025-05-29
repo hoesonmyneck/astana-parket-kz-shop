@@ -19,6 +19,7 @@ const Product = () => {
       length: "1200 мм",
       finish: "Масло-воск",
       warranty: "25 лет",
+      image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       description: "Классический дубовый паркет с натуральной текстурой дерева. Идеально подходит для гостиных, спален и кабинетов. Обработан экологически чистым масло-воском, что подчеркивает естественную красоту древесины.",
       features: [
         "100% натуральный дуб из европейских лесов",
@@ -38,6 +39,7 @@ const Product = () => {
       length: "1400 мм", 
       finish: "Лак полиуретановый",
       warranty: "20 лет",
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       description: "Элегантный паркет из массива ясеня с выраженной текстурой. Светлые тона визуально увеличивают пространство. Покрыт износостойким полиуретановым лаком.",
       features: [
         "Массив ясеня высшего сорта",
@@ -57,6 +59,7 @@ const Product = () => {
       length: "1500 мм",
       finish: "Масло с твердым воском",
       warranty: "30 лет",
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       description: "Эксклюзивный паркет из американского ореха премиум-класса. Богатая шоколадная текстура создает атмосферу роскоши. Каждая планка уникальна по рисунку.",
       features: [
         "Элитная древесина американского ореха",
@@ -92,11 +95,35 @@ const Product = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Product Image */}
             <div className="space-y-4">
-              <div className="aspect-square bg-gradient-to-br from-amber-100 to-orange-200 rounded-lg"></div>
+              <div className="aspect-square overflow-hidden rounded-lg">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="grid grid-cols-3 gap-4">
-                <div className="aspect-square bg-gradient-to-br from-amber-200 to-orange-300 rounded-lg opacity-80"></div>
-                <div className="aspect-square bg-gradient-to-br from-amber-200 to-orange-300 rounded-lg opacity-80"></div>
-                <div className="aspect-square bg-gradient-to-br from-amber-200 to-orange-300 rounded-lg opacity-80"></div>
+                <div className="aspect-square overflow-hidden rounded-lg">
+                  <img 
+                    src={product.image} 
+                    alt={`${product.name} вид 1`}
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                </div>
+                <div className="aspect-square overflow-hidden rounded-lg">
+                  <img 
+                    src={product.image} 
+                    alt={`${product.name} вид 2`}
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                </div>
+                <div className="aspect-square overflow-hidden rounded-lg">
+                  <img 
+                    src={product.image} 
+                    alt={`${product.name} вид 3`}
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                </div>
               </div>
             </div>
 

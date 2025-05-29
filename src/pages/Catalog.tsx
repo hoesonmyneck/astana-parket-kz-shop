@@ -18,7 +18,7 @@ const Catalog = () => {
       category: "oak",
       material: "Натуральный дуб",
       thickness: "15 мм",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Catalog = () => {
       category: "ash",
       material: "Массив ясеня",
       thickness: "18 мм",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Catalog = () => {
       category: "walnut",
       material: "Американский орех",
       thickness: "20 мм",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const Catalog = () => {
       category: "oak", 
       material: "Состаренный дуб",
       thickness: "15 мм",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const Catalog = () => {
       category: "maple",
       material: "Канадский клен",
       thickness: "16 мм", 
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1439886183900-e79ec0057170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const Catalog = () => {
       category: "walnut",
       material: "Европейский орех",
       thickness: "22 мм",
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -115,7 +115,13 @@ const Catalog = () => {
             {filteredProducts.map((product) => (
               <Link key={product.id} to={`/product/${product.id}`}>
                 <Card className="group cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm">
-                  <div className="aspect-square bg-gradient-to-br from-amber-100 to-orange-200 rounded-t-lg"></div>
+                  <div className="aspect-square overflow-hidden rounded-t-lg">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold text-amber-900 mb-2 group-hover:text-orange-800 transition-colors">
                       {product.name}

@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-amber-900">
-            ПаркетАстана
+            ParketKZ
           </Link>
 
           {/* Desktop Navigation */}

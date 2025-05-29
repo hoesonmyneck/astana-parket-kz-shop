@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">ПаркетАстана</h3>
+            <h3 className="text-2xl font-bold mb-4">ParketKZ</h3>
             <p className="text-amber-100 mb-4">
               Ведущий поставщик элитных паркетных покрытий в Астане с 2014 года.
             </p>
@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-3 text-amber-300" />
-                <span className="text-amber-100">info@parket-astana.kz</span>
+                <span className="text-amber-100">info@parket-kz.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-3 text-amber-300 mt-1" />
@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div className="border-t border-amber-800 mt-8 pt-8 text-center">
           <p className="text-amber-200">
-            © 2024 ПаркетАстана. Все права защищены.
+            © 2024 ParketKZ. Все права защищены.
           </p>
         </div>
       </div>
